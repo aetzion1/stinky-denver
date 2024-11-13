@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Stinkometer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f0f0f0;
+        }
+        .gauge {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin: 0 auto;
+            background: linear-gradient(to right, #4CAF50 50%, #ddd 50%);
+            border-radius: 150px 150px 0 0;
+            overflow: hidden;
+        }
+        .needle {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            height: 100px;
+            background: red;
+            transform-origin: bottom center;
+            transform: rotate(calc(180deg - (180deg * var(--value))));
+            transition: transform 0.5s ease-in-out;
+        }
+        .labels {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 20px auto 0;
+        }
+    </style>
 </head>
 <body>
     <h1>Stinkometer</h1>
-    <p>Stink Value: {{ stink_value }}</p>
+    <div class="gauge">
+        <div class="needle" style="--value: {{ stink_value | round(2) }}"></div>
+    </div>
+    <div class="labels">
+        <span style="color: green;">Fresh</span>
+        <span style="color: red;">Stinky</span>
+    </div>
 </body>
 </html>
