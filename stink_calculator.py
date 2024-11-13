@@ -87,7 +87,7 @@ class StinkClient:
 
     def _parse_stinkiness_response(self, response_json):
       return StinkinessResponse(
-          rating=response_json['rating'],
+          rating=1 - response_json['rating'],
           factors=response_json['factors'],
           poem=response_json['poem']
       )
