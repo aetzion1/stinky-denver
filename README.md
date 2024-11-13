@@ -11,5 +11,5 @@
 * run `python app.py`
 
 ## Next Steps
-- [] Add business and/or AI logic to generate stink_value
-- [] Add genAI function to create short rhyme about how stinky it is
+- [ ] Add business and/or AI logic to generate stink_value
+- [ ] Add genAI function to create short rhyme about how stinky it is
