@@ -8,6 +8,8 @@ client = initialize_client()
 @app.route('/')
 def index():
     try:
+        # Uncomment the next line to simulate an error with the AI client
+        # raise Exception(f"Failed to determine stinkiness.")
         stinkiness = client.request_stinkiness()
     except Exception as e:
         stinkiness = client.error_response

@@ -83,7 +83,7 @@ class StinkClient:
             client_response = self._parse_client_response(response.json())
             return client_response.message
         except requests.RequestException as e:
-            raise SystemExit(f"Failed to make the request. Error: {e}")
+            raise Exception(f"Failed to make the request. Error: {e}")
 
     def _parse_stinkiness_response(self, response_json):
       return StinkinessResponse(
