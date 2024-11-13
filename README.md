@@ -8,8 +8,9 @@
 * create `.env` file and add relevant environment variables (see .env_sample for variables used)
 
 ## How to run the app
+* Activate virtual env if not done so already, `. .venv/bin/activate`
 * run `python app.py`
 
 ## Next Steps
-- [ ] Add business and/or AI logic to generate stink_value
-- [ ] Add genAI function to create short rhyme about how stinky it is
+- [X] Add business and/or AI logic to generate stink_value
+- [X] Add genAI function to create short rhyme about how stinky it is
