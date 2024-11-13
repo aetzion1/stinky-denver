@@ -5,7 +5,7 @@
 ## Configuration
 * run `. .venv/bin/activate` at project root
 * run `pip install -r requirements.txt`
-* create `.env` file and add relevant environment variables
+* create `.env` file and add relevant environment variables (see .env_sample for variables used)
 
 ## How to run the app
 * run `python app.py`
